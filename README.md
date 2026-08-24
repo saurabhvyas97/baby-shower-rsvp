@@ -1,50 +1,61 @@
-# Baby Shower RSVP GitHub Page
+# Baby Shower RSVP
 
-This folder is ready to publish with GitHub Pages.
+```mermaid
+flowchart TB
+  classDef surface fill:#e9f7ff,stroke:#68aeda,stroke-width:2px,color:#1f3a4f
+  classDef bridge fill:#fff6d9,stroke:#d7a947,stroke-width:2px,color:#4d3a10
+  classDef private fill:#edf8ef,stroke:#7dac85,stroke-width:2px,color:#24472c
+  classDef host fill:#f7edf8,stroke:#bb8ec4,stroke-width:2px,color:#47224e
 
-## Edit Event Details
+  subgraph Invite_Surface["Public invitation surface"]
+    direction LR
+    Guest["Guest"]
+    Site["GitHub Pages\nRSVP Website"]
+    RSVP["RSVP Form\nConfirmation UI"]
+  end
 
-Open `script.js` and update `EVENT_CONFIG`:
+  subgraph Data_Bridge["Data bridge"]
+    direction LR
+    Endpoint["Google Apps Script\nWeb Endpoint"]
+    Logic["Save RSVP\nRead Summary"]
+  end
 
-- `date`
-- `time`
-- `title`
-- `summary`
-- `mapsUrl`
-- `rsvpEndpoint`
-- `statsEndpoint`
+  subgraph Private_Data["Private planning layer"]
+    direction LR
+    Sheet[("Google Sheet\nFull RSVP Records")]
+    Counts["Aggregate RSVP Counts"]
+  end
 
-The page is currently set to:
+  subgraph Host_View["Host view"]
+    direction LR
+    Stats["Stats Page"]
+    Host["Prachi & Saurabh"]
+  end
 
-- Date: Saturday, 3 October 2026
-- Time: Lunch and afternoon
-- Location: Stockholm
+  Guest --> Site
+  Site --> RSVP
+  RSVP ==> Endpoint
+  Endpoint --> Logic
+  Logic ==> Sheet
+  Sheet --> Counts
+  Counts ==> Stats
+  Sheet -.-> Host
+  Stats -.-> Host
 
-## RSVP Storage
+  Guest:::surface
+  Site:::surface
+  RSVP:::surface
+  Endpoint:::bridge
+  Logic:::bridge
+  Sheet:::private
+  Counts:::private
+  Stats:::host
+  Host:::host
+```
 
-GitHub Pages is static, so it cannot save RSVP responses on its own. The page has a demo mode that saves test responses in the visitor's browser. For real shared RSVP stats, use a Google Sheet plus Apps Script.
-
-The ready-to-paste backend is in `google-apps-script.gs`.
-
-1. Create a Google Sheet.
-2. Open Extensions > Apps Script.
-3. Paste the contents of `google-apps-script.gs`.
-4. Replace `SHEET_ID`.
-5. Click Deploy > New deployment > Web app.
-6. Set "Execute as" to "Me".
-7. Set "Who has access" to "Anyone".
-8. Copy the Web app URL.
-9. Paste that URL into both `rsvpEndpoint` and `statsEndpoint` in `script.js`.
-10. Push the updated `script.js` to your GitHub repository.
-
-Note: GitHub Pages does not provide private authentication. Keep the Google Sheet private for full RSVP details. The included `stats.html` page is useful for quick totals, but it is public if you publish it. The script below returns only RSVP confirmation summary fields to the public stats page.
-
-## Publish With GitHub Pages
-
-1. Create a GitHub repository.
-2. Upload the files in this folder.
-3. In GitHub, open Settings > Pages.
-4. Set Source to "Deploy from a branch".
-5. Select the `main` branch and `/root`, then save.
-
-Your RSVP page will be available at the GitHub Pages URL shown in that settings page.
+```text
+Public layer: invitation and RSVP experience
+Bridge layer: form submission and summary access
+Private layer: full RSVP records
+Host layer: planning view and aggregate stats
+```
