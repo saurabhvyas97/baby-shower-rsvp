@@ -337,6 +337,46 @@ footer {
   text-align: center;
 }
 
+.confirmation-modal[hidden] {
+  display: none;
+}
+
+.confirmation-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.confirmation-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(33, 50, 68, 0.36);
+  backdrop-filter: blur(5px);
+}
+
+.confirmation-modal__panel {
+  position: relative;
+  width: min(460px, 100%);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: var(--shadow);
+  padding: clamp(24px, 6vw, 38px);
+}
+
+.confirmation-modal__panel h2 {
+  font-size: clamp(1.9rem, 5vw, 2.8rem);
+}
+
+.confirmation-modal__panel p:not(.eyebrow) {
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 16px 0 22px;
+}
+
 .stats-page {
   min-height: 100vh;
 }

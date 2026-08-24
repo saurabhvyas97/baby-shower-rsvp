@@ -18,6 +18,7 @@ const sampleResponses = [
 document.addEventListener("DOMContentLoaded", () => {
   applyEventConfig();
   wireRsvpForm();
+  wireConfirmationModal();
 
   if (document.body.classList.contains("stats-page")) {
     renderStats();
@@ -61,10 +62,45 @@ function wireRsvpForm() {
 
       form.reset();
       status.textContent = "Thank you. Your RSVP has been saved.";
+      showConfirmationModal();
     } catch (error) {
       status.textContent = "Something went wrong. Please try again or message the host.";
     }
   });
+}
+
+function wireConfirmationModal() {
+  const modal = document.getElementById("confirmation-modal");
+  if (!modal) return;
+
+  modal.querySelectorAll("[data-close-confirmation]").forEach((element) => {
+    element.addEventListener("click", hideConfirmationModal);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !modal.hidden) {
+      hideConfirmationModal();
+    }
+  });
+}
+
+function showConfirmationModal() {
+  const modal = document.getElementById("confirmation-modal");
+  if (!modal) return;
+
+  modal.hidden = false;
+  const button = modal.querySelector("button");
+  if (button) button.focus();
+}
+
+function hideConfirmationModal() {
+  const modal = document.getElementById("confirmation-modal");
+  if (!modal) return;
+
+  modal.hidden = true;
+  const form = document.getElementById("rsvp");
+  const firstInput = form && form.querySelector("input, textarea, button");
+  if (firstInput) firstInput.focus();
 }
 
 async function renderStats() {
