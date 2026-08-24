@@ -5,8 +5,8 @@ const EVENT_CONFIG = {
   time: "Lunch and afternoon",
   locationName: "Stockholm",
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=Stockholm",
-  rsvpEndpoint: "",
-  statsEndpoint: "",
+  rsvpEndpoint: "https://script.google.com/macros/s/AKfycbyeAZEJr-qUx0cG6pnVY7UZbmtad7Ec69uf_wNm5FeOtCCmFutx1hmxhHUZ10ha7niqBg/exec",
+  statsEndpoint: "https://script.google.com/macros/s/AKfycbyeAZEJr-qUx0cG6pnVY7UZbmtad7Ec69uf_wNm5FeOtCCmFutx1hmxhHUZ10ha7niqBg/exec",
   localStorageKey: "baby-shower-rsvps"
 };
 
