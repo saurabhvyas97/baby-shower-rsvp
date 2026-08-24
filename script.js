@@ -52,6 +52,9 @@ function wireRsvpForm() {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const status = document.getElementById("form-status");
+    const submitButton = document.getElementById("submit-rsvp");
+    setSubmitState(submitButton, status, true);
+
     const payload = Object.fromEntries(new FormData(form).entries());
     payload.guests = payload.status === "no" ? 0 : Number(payload.guests || 0);
     payload.children = Number(payload.children || 0);
@@ -74,8 +77,21 @@ function wireRsvpForm() {
       showConfirmationModal();
     } catch (error) {
       status.textContent = "Something went wrong. Please try again or message the host.";
+    } finally {
+      setSubmitState(submitButton, status, false);
     }
   });
+}
+
+function setSubmitState(button, status, isSubmitting) {
+  if (button) {
+    button.disabled = isSubmitting;
+    button.textContent = isSubmitting ? "Sending RSVP..." : "Submit RSVP";
+  }
+
+  if (status && isSubmitting) {
+    status.textContent = "Sending your RSVP...";
+  }
 }
 
 function wireConfirmationModal() {
