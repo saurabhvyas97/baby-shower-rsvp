@@ -1,6 +1,6 @@
 const EVENT_CONFIG = {
   title: "A Baby Shower for Our Little One",
-  summary: "Join us for a soft afternoon baby shower in Stockholm. Exact time and location will be shared with confirmed guests.",
+  summary: "Join us for a soft afternoon baby shower in Stockholm. The exact time and location will be shared soon with everyone attending.",
   date: "Saturday, 3 October 2026",
   time: "Lunch and afternoon",
   locationName: "Stockholm",
