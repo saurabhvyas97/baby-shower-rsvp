@@ -40,11 +40,20 @@ function wireRsvpForm() {
   const form = document.getElementById("rsvp");
   if (!form) return;
 
+  form.querySelectorAll('input[name="status"]').forEach((input) => {
+    input.addEventListener("change", () => {
+      const guestsInput = form.elements.guests;
+      if (input.value === "no" && input.checked && guestsInput) {
+        guestsInput.value = "0";
+      }
+    });
+  });
+
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const status = document.getElementById("form-status");
     const payload = Object.fromEntries(new FormData(form).entries());
-    payload.guests = Number(payload.guests || 1);
+    payload.guests = payload.status === "no" ? 0 : Number(payload.guests || 0);
     payload.children = Number(payload.children || 0);
     payload.createdAt = new Date().toISOString();
 
