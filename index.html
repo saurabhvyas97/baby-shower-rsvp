@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="RSVP for a baby shower in Stockholm.">
+    <title>Baby Shower RSVP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="hero">
+      <img class="hero__image" src="assets/baby-shower-hero.png" alt="Watercolor baby shower decorations with pale blue balloons, flowers, and baby shoes">
+      <nav class="topbar" aria-label="Event">
+        <a class="brand" href="index.html">Baby Shower</a>
+        <div class="topbar__links">
+          <a href="#rsvp">RSVP</a>
+          <a href="#details">Details</a>
+        </div>
+      </nav>
+      <section class="hero__content" aria-labelledby="event-title">
+        <p class="eyebrow">You are invited</p>
+        <h1 id="event-title">A Baby Shower for Our Little Boy</h1>
+        <p class="hero__copy" id="event-summary">Join us for a soft afternoon baby shower in Stockholm. Exact time and location will be shared with confirmed guests.</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#rsvp">Send RSVP</a>
+          <a class="button button--secondary" id="maps-link" target="_blank" rel="noreferrer">View Area</a>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="event-strip" id="details" aria-label="Event details">
+        <div>
+          <span>Date</span>
+          <strong id="event-date">Date to be announced</strong>
+        </div>
+        <div>
+          <span>Time</span>
+          <strong id="event-time">Time to be announced</strong>
+        </div>
+        <div>
+          <span>Location</span>
+          <strong id="event-location">Stockholm</strong>
+        </div>
+      </section>
+
+      <section class="content-grid" aria-label="Invitation and RSVP">
+        <article class="note">
+          <p class="eyebrow">A little note</p>
+          <h2>We would love to celebrate with you.</h2>
+          <p>
+            Please let us know whether you can make it, how many people are coming,
+            and any dietary notes we should plan around.
+          </p>
+          <p>
+            Exact times and the final location will be sent by email to guests
+            who RSVP as attending.
+          </p>
+          <p>
+            We are keeping the day soft, relaxed, and full of the people who
+            already mean so much to this little one.
+          </p>
+        </article>
+
+        <form class="rsvp-form" id="rsvp" aria-label="RSVP form">
+          <div class="form-heading">
+            <p class="eyebrow">RSVP</p>
+            <h2>Will you be there?</h2>
+          </div>
+
+          <label>
+            <span>Your name</span>
+            <input name="name" type="text" autocomplete="name" required placeholder="Full name">
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+          </label>
+
+          <fieldset>
+            <legend>Response</legend>
+            <label class="choice">
+              <input type="radio" name="status" value="yes" required>
+              <span>Joyfully attending</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="status" value="maybe">
+              <span>Not sure yet</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="status" value="no">
+              <span>Sending love from afar</span>
+            </label>
+          </fieldset>
+
+          <div class="form-row">
+            <label>
+              <span>Guests</span>
+              <input name="guests" type="number" min="1" max="8" value="1" required>
+            </label>
+            <label>
+              <span>Children</span>
+              <input name="children" type="number" min="0" max="8" value="0">
+            </label>
+          </div>
+
+          <label>
+            <span>Dietary notes</span>
+            <textarea name="dietary" rows="3" placeholder="Allergies, vegetarian, halal, etc."></textarea>
+          </label>
+
+          <label>
+            <span>Message for the parents</span>
+            <textarea name="message" rows="4" placeholder="A note, song request, or anything sweet."></textarea>
+          </label>
+
+          <button class="button button--primary" type="submit">Submit RSVP</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <span id="footer-text">Made with love for a baby shower in Stockholm.</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

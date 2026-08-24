@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="RSVP statistics for the baby shower.">
+    <title>Baby Shower RSVP Stats</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="stats-page">
+    <nav class="topbar topbar--plain" aria-label="Stats">
+      <a class="brand" href="index.html">Baby Shower</a>
+      <div class="topbar__links">
+        <a href="index.html#rsvp">RSVP</a>
+        <a href="index.html#details">Details</a>
+      </div>
+    </nav>
+
+    <main class="stats-shell">
+      <section class="stats-intro">
+        <p class="eyebrow">RSVP dashboard</p>
+        <h1>Guest confirmations</h1>
+        <p id="stats-source">Showing demo responses saved in this browser. Add an endpoint in <code>script.js</code> for shared RSVP counts.</p>
+      </section>
+
+      <section class="metric-grid" aria-label="RSVP totals">
+        <article>
+          <span>Attending</span>
+          <strong id="metric-yes">0</strong>
+        </article>
+        <article>
+          <span>Maybe</span>
+          <strong id="metric-maybe">0</strong>
+        </article>
+        <article>
+          <span>Declined</span>
+          <strong id="metric-no">0</strong>
+        </article>
+        <article>
+          <span>Total guests</span>
+          <strong id="metric-guests">0</strong>
+        </article>
+      </section>
+
+      <section class="stats-panel" aria-label="Response breakdown">
+        <div class="bar-row">
+          <span>Yes</span>
+          <div class="bar"><i id="bar-yes"></i></div>
+          <b id="bar-yes-label">0%</b>
+        </div>
+        <div class="bar-row">
+          <span>Maybe</span>
+          <div class="bar"><i id="bar-maybe"></i></div>
+          <b id="bar-maybe-label">0%</b>
+        </div>
+        <div class="bar-row">
+          <span>No</span>
+          <div class="bar"><i id="bar-no"></i></div>
+          <b id="bar-no-label">0%</b>
+        </div>
+      </section>
+
+      <section class="stats-panel">
+        <div class="table-actions">
+          <h2>Responses</h2>
+          <button class="button button--secondary" id="download-csv" type="button">Download CSV</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Guests</th>
+                <th>Children</th>
+                <th>Submitted</th>
+              </tr>
+            </thead>
+            <tbody id="responses-table"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
