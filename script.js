@@ -60,7 +60,7 @@ function wireRsvpForm() {
       }
 
       form.reset();
-      status.textContent = "Thank you. Your RSVP has been saved. We will email final location details to attending guests.";
+      status.textContent = "Thank you. Your RSVP has been saved.";
     } catch (error) {
       status.textContent = "Something went wrong. Please try again or message the host.";
     }
