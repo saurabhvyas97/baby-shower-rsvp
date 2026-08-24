@@ -37,7 +37,7 @@ The ready-to-paste backend is in `google-apps-script.gs`.
 9. Paste that URL into both `rsvpEndpoint` and `statsEndpoint` in `script.js`.
 10. Push the updated `script.js` to your GitHub repository.
 
-Note: GitHub Pages does not provide private authentication. Keep the Google Sheet private for full guest details. The included `stats.html` page is useful for quick totals, but it is public if you publish it. The script below returns only RSVP confirmation summary fields to the public stats page.
+Note: GitHub Pages does not provide private authentication. Keep the Google Sheet private for full RSVP details. The included `stats.html` page is useful for quick totals, but it is public if you publish it. The script below returns only RSVP confirmation summary fields to the public stats page.
 
 ## Publish With GitHub Pages
 

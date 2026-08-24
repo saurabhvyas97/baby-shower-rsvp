@@ -11,8 +11,8 @@ const EVENT_CONFIG = {
 };
 
 const sampleResponses = [
-  { name: "Demo Guest", email: "demo@example.com", status: "yes", guests: 2, children: 0, dietary: "Vegetarian", message: "So excited!", createdAt: "2026-08-23T10:00:00.000Z" },
-  { name: "Sample Family", email: "family@example.com", status: "maybe", guests: 3, children: 1, dietary: "", message: "", createdAt: "2026-08-23T10:10:00.000Z" }
+  { name: "Demo Guest", status: "yes", guests: 2, children: 0, dietary: "Vegetarian", message: "So excited!", createdAt: "2026-08-23T10:00:00.000Z" },
+  { name: "Sample Family", status: "maybe", guests: 3, children: 1, dietary: "", message: "", createdAt: "2026-08-23T10:10:00.000Z" }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {

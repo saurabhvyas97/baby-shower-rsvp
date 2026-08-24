@@ -4,7 +4,6 @@ const SHEET_NAME = "Sheet1";
 const HEADERS = [
   "createdAt",
   "name",
-  "email",
   "status",
   "guests",
   "children",
@@ -20,7 +19,6 @@ function doPost(e) {
   sheet.appendRow([
     data.createdAt || new Date().toISOString(),
     data.name || "",
-    data.email || "",
     data.status || "",
     Number(data.guests || 0),
     Number(data.children || 0),
