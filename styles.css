@@ -720,9 +720,9 @@ td {
     min-height: 94vh;
     align-items: center;
     background-image: url("assets/baby-shower-hero.png");
-    background-position: 72% center;
+    background-position: 60% 96px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 185% auto;
     padding-top: 112px;
   }
 
@@ -732,8 +732,8 @@ td {
 
   .hero::after {
     background:
-      linear-gradient(90deg, rgba(255, 250, 240, 0.92), rgba(255, 250, 240, 0.74) 58%, rgba(255, 250, 240, 0.22)),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.08) 58%, rgba(255, 249, 237, 0.9));
+      linear-gradient(90deg, rgba(255, 250, 240, 0.9), rgba(255, 250, 240, 0.68) 62%, rgba(255, 250, 240, 0.16)),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02) 54%, rgba(255, 249, 237, 0.88));
   }
 
   .topbar {
@@ -787,15 +787,16 @@ td {
   }
 
   .hero {
-    background-position: 74% center;
+    background-position: 62% 92px;
+    background-size: 220% auto;
     min-height: 94vh;
     padding: 112px 16px 46px;
   }
 
   .hero::after {
     background:
-      linear-gradient(90deg, rgba(255, 250, 240, 0.94), rgba(255, 250, 240, 0.8) 64%, rgba(255, 250, 240, 0.2)),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.36), rgba(255, 255, 255, 0.08) 54%, rgba(255, 249, 237, 0.92));
+      linear-gradient(90deg, rgba(255, 250, 240, 0.92), rgba(255, 250, 240, 0.72) 66%, rgba(255, 250, 240, 0.12)),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02) 50%, rgba(255, 249, 237, 0.9));
   }
 
   .topbar__links a {
