@@ -719,18 +719,21 @@ td {
   .hero {
     min-height: 92vh;
     align-items: end;
-    padding-top: 300px;
+    padding-top: calc(92px + min(64vw, 430px) + 28px);
   }
 
   .hero__image {
-    height: 58%;
-    object-position: 72% top;
+    top: 92px;
+    bottom: auto;
+    height: min(64vw, 430px);
+    object-fit: contain;
+    object-position: center top;
   }
 
   .hero::after {
     background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(247, 252, 255, 0.92) 55%, rgba(255, 249, 237, 0.98)),
-      linear-gradient(90deg, rgba(255, 250, 240, 0.2), rgba(255, 250, 240, 0.08));
+      linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(247, 252, 255, 0.12) 42%, rgba(255, 249, 237, 0.98) 68%),
+      linear-gradient(90deg, rgba(255, 250, 240, 0.08), rgba(255, 250, 240, 0));
   }
 
   .topbar {
@@ -785,12 +788,14 @@ td {
 
   .hero {
     min-height: 94vh;
-    padding: 280px 16px 46px;
+    padding: calc(86px + 68vw + 28px) 16px 46px;
   }
 
   .hero__image {
-    height: 52%;
-    object-position: 76% top;
+    top: 86px;
+    height: 68vw;
+    object-fit: contain;
+    object-position: center top;
   }
 
   .topbar__links a {
