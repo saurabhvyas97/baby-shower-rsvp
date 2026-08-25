@@ -719,15 +719,15 @@ td {
   .hero {
     min-height: 94vh;
     align-items: center;
+    background-image: url("assets/baby-shower-hero.png");
+    background-position: 72% center;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding-top: 112px;
   }
 
   .hero__image {
-    inset: 0;
-    height: 100%;
-    object-fit: cover;
-    object-position: 70% center;
-    opacity: 0.64;
+    display: none;
   }
 
   .hero::after {
@@ -787,16 +787,9 @@ td {
   }
 
   .hero {
+    background-position: 74% center;
     min-height: 94vh;
     padding: 112px 16px 46px;
-  }
-
-  .hero__image {
-    inset: 0;
-    height: 100%;
-    object-fit: cover;
-    object-position: 72% center;
-    opacity: 0.62;
   }
 
   .hero::after {
