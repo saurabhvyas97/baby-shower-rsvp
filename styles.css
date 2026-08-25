@@ -734,8 +734,8 @@ td {
 
   .hero::after {
     background:
-      radial-gradient(ellipse at 28% 54%, rgba(255, 250, 240, 0.84), rgba(255, 250, 240, 0.44) 48%, rgba(255, 250, 240, 0) 72%),
-      linear-gradient(90deg, rgba(255, 250, 240, 0.88), rgba(255, 250, 240, 0.66) 62%, rgba(255, 250, 240, 0.18)),
+      radial-gradient(ellipse at 28% 54%, rgba(255, 250, 240, 0.94), rgba(255, 250, 240, 0.62) 48%, rgba(255, 250, 240, 0.08) 72%),
+      linear-gradient(90deg, rgba(255, 250, 240, 0.9), rgba(255, 250, 240, 0.68) 62%, rgba(255, 250, 240, 0.18)),
       linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.04) 54%, rgba(255, 249, 237, 0.9));
   }
 
@@ -798,8 +798,8 @@ td {
 
   .hero::after {
     background:
-      radial-gradient(ellipse at 32% 54%, rgba(255, 250, 240, 0.86), rgba(255, 250, 240, 0.48) 50%, rgba(255, 250, 240, 0) 74%),
-      linear-gradient(90deg, rgba(255, 250, 240, 0.9), rgba(255, 250, 240, 0.7) 66%, rgba(255, 250, 240, 0.16)),
+      radial-gradient(ellipse at 32% 54%, rgba(255, 250, 240, 0.96), rgba(255, 250, 240, 0.68) 50%, rgba(255, 250, 240, 0.1) 74%),
+      linear-gradient(90deg, rgba(255, 250, 240, 0.92), rgba(255, 250, 240, 0.72) 66%, rgba(255, 250, 240, 0.16)),
       linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.04) 50%, rgba(255, 249, 237, 0.92));
   }
 
